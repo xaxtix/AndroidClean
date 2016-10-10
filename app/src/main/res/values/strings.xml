@@ -3,4 +3,5 @@
     <string name="owner">Owner</string>
     <string name="repo">Repository</string>
     <string name="showing">Show</string>
+    <string name="ok">Ok</string>
 </resources>

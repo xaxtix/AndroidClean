@@ -1,6 +1,7 @@
 package com.samorodov.ilia.myapplication.presentation.commtis;
 
 import android.content.Context;
+import android.support.annotation.Nullable;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -14,19 +15,20 @@ import java.util.List;
 
 public class CommitsAdapter extends BaseAdapter {
 
+    @Nullable
     final List<Commit> commits;
 
     final Context context;
 
 
-    public CommitsAdapter(List<Commit> commits, Context context) {
+    public CommitsAdapter(@Nullable List<Commit> commits, Context context) {
         this.commits = commits;
         this.context = context;
     }
 
     @Override
     public int getCount() {
-        return commits.size();
+        return commits == null ? 0 : commits.size();
     }
 
     @Override

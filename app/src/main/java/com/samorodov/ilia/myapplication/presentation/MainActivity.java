@@ -31,6 +31,11 @@ public class MainActivity extends AppCompatActivity implements ActivityCallback 
         addNewFragment(CommitsFragment.newInstance(repository));
     }
 
+    @Override
+    public void back() {
+        onBackPressed();
+    }
+
     public void addNewFragment(Fragment fragment) {
         getFragmentManager().beginTransaction()
                 .setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN)

@@ -6,4 +6,6 @@ public interface ActivityCallback {
 
     void startCommitsFragment(Repository repository);
 
+    void back();
+
 }

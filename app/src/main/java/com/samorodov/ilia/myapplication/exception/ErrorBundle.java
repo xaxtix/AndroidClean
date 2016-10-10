@@ -1,6 +1,8 @@
 package com.samorodov.ilia.myapplication.exception;
 
-public interface ErrorBundle {
+import java.io.Serializable;
+
+public interface ErrorBundle extends Serializable{
 
     Throwable exception();
 

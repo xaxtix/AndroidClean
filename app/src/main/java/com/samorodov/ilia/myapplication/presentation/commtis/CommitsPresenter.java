@@ -3,6 +3,10 @@ package com.samorodov.ilia.myapplication.presentation.commtis;
 
 import android.os.Bundle;
 
+import com.samorodov.ilia.myapplication.exception.DefaultErrorBundle;
+import com.samorodov.ilia.myapplication.exception.ErrorBundle;
+import com.samorodov.ilia.myapplication.exception.ErrorBundleFactory;
+import com.samorodov.ilia.myapplication.exception.HttpErrorBundle;
 import com.samorodov.ilia.myapplication.interactor.GetCommitsInteractor;
 import com.samorodov.ilia.myapplication.model.Commit;
 import com.samorodov.ilia.myapplication.model.Repository;
@@ -58,7 +62,7 @@ public class CommitsPresenter extends BasePresenter<CommitsView> {
 
             @Override
             public void onError(Throwable e) {
-                getView().showError(e);
+                getView().showError(ErrorBundleFactory.createErrorBundle(e));
             }
 
             @Override

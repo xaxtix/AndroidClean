@@ -10,6 +10,8 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.samorodov.ilia.myapplication.Application;
+import com.samorodov.ilia.myapplication.exception.DefaultErrorBundle;
+import com.samorodov.ilia.myapplication.exception.ErrorBundle;
 import com.samorodov.ilia.myapplication.injection.component.AppComponent;
 import com.samorodov.ilia.myapplication.presentation.ActivityCallback;
 import com.trello.rxlifecycle.LifecycleProvider;
@@ -59,9 +61,10 @@ public abstract class BaseFragment extends Fragment {
         return ((Application) getActivity().getApplicationContext()).getInjector();
     }
 
-    public void showError(Throwable e){
+    public void showError(ErrorBundle e){
         new AlertDialog.Builder(getActivity())
-                .setTitle(e.getMessage())
+                .setTitle(e.getErrorTitle())
+                .setMessage(e.getMessage())
                 .show();
     }
 

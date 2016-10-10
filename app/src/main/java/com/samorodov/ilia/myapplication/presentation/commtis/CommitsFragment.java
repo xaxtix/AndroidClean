@@ -13,6 +13,8 @@ import android.widget.TextView;
 
 import com.samorodov.ilia.myapplication.R;
 import com.samorodov.ilia.myapplication.api.ApiInterface;
+import com.samorodov.ilia.myapplication.exception.DefaultErrorBundle;
+import com.samorodov.ilia.myapplication.exception.ErrorBundle;
 import com.samorodov.ilia.myapplication.model.Commit;
 import com.samorodov.ilia.myapplication.model.Repository;
 import com.samorodov.ilia.myapplication.model.dto.CommitDTO;
@@ -87,9 +89,10 @@ public class CommitsFragment extends BaseFragment implements CommitsView {
     }
 
     @Override
-    public void showError(Throwable e) {
+    public void showError(ErrorBundle e) {
         super.showError(e);
     }
+
 
     @Override
     public void setCommits(final List<Commit> commits) {

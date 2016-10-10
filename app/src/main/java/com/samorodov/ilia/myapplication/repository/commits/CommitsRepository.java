@@ -11,5 +11,5 @@ import rx.Observable;
  */
 public interface CommitsRepository {
 
-    Observable<List<Commit>> getCommits();
+    Observable<List<Commit>> getCommits(String owner,String repo);
 }

@@ -25,8 +25,8 @@ public class CommitsDataRepository implements CommitsRepository {
     }
 
     @Override
-    public Observable<List<Commit>> getCommits() {
-        return mApiInterface.getCommits()
+    public Observable<List<Commit>> getCommits(String owner,String repo) {
+        return mApiInterface.getCommits(owner, repo)
                 .map(mMapper);
     }
 }

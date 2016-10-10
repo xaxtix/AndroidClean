@@ -6,6 +6,7 @@ import com.samorodov.ilia.myapplication.injection.dependencies.UrlModule;
 import com.samorodov.ilia.myapplication.injection.module.ApiModule;
 import com.samorodov.ilia.myapplication.injection.module.InterceptorModule;
 import com.samorodov.ilia.myapplication.presentation.commtis.CommitsFragment;
+import com.samorodov.ilia.myapplication.presentation.starting.StartingFragment;
 
 import javax.inject.Singleton;
 
@@ -21,4 +22,5 @@ import dagger.Component;
 
 public interface AppComponent {
     void inject(CommitsFragment fragment);
+    void inject(StartingFragment fragment);
 }

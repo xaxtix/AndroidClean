@@ -11,6 +11,7 @@ import android.view.ViewGroup;
 
 import com.samorodov.ilia.myapplication.Application;
 import com.samorodov.ilia.myapplication.injection.component.AppComponent;
+import com.samorodov.ilia.myapplication.presentation.ActivityCallback;
 import com.trello.rxlifecycle.LifecycleProvider;
 import com.trello.rxlifecycle.components.RxFragment;
 
@@ -28,10 +29,13 @@ public abstract class BaseFragment extends Fragment {
     @Nullable
     protected abstract BasePresenter getPresenter();
 
+    ActivityCallback activityCallback;
+
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         inject();
+        activityCallback = (ActivityCallback) getActivity();
     }
 
     @Override
@@ -59,5 +63,9 @@ public abstract class BaseFragment extends Fragment {
         new AlertDialog.Builder(getActivity())
                 .setTitle(e.getMessage())
                 .show();
+    }
+
+    public ActivityCallback getActivityCallback() {
+        return activityCallback;
     }
 }

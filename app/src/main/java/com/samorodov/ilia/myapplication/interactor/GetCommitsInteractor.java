@@ -1,6 +1,7 @@
 package com.samorodov.ilia.myapplication.interactor;
 
 import com.samorodov.ilia.myapplication.injection.dependencies.SchedulersModule;
+import com.samorodov.ilia.myapplication.model.Repository;
 import com.samorodov.ilia.myapplication.repository.commits.CommitsDataRepository;
 import com.samorodov.ilia.myapplication.model.Commit;
 
@@ -14,7 +15,7 @@ import rx.Observable;
 import rx.Scheduler;
 import rx.functions.Func1;
 
-public class GetCommitsInteractor extends BaseInteractor<List<Commit>> {
+public class GetCommitsInteractor extends BaseInteractor<Repository,List<Commit>> {
 
     CommitsDataRepository repository;
 
@@ -34,8 +35,8 @@ public class GetCommitsInteractor extends BaseInteractor<List<Commit>> {
 
 
     @Override
-    protected Observable<List<Commit>> buildUseCaseObservable() {
-        return repository.getCommits()
+    protected Observable<List<Commit>> buildUseCaseObservable(Repository repo) {
+        return repository.getCommits(repo.getAuthor(),repo.getRepo())
                 .subscribeOn(job)
                 .observeOn(ui)
                 .unsubscribeOn(job);

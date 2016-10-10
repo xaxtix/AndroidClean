@@ -5,6 +5,7 @@ import android.os.Bundle;
 
 import com.samorodov.ilia.myapplication.interactor.GetCommitsInteractor;
 import com.samorodov.ilia.myapplication.model.Commit;
+import com.samorodov.ilia.myapplication.model.Repository;
 import com.samorodov.ilia.myapplication.presentation.base.BasePresenter;
 import com.trello.rxlifecycle.android.FragmentEvent;
 
@@ -30,11 +31,6 @@ public class CommitsPresenter extends BasePresenter<CommitsView> {
         this.interactor = interactor;
     }
 
-    @Override
-    public void onCreate(CommitsView commitsView) {
-        super.onCreate(commitsView);
-    }
-
     public void onCreateView(Bundle savedInstanceState) {
         if (savedInstanceState != null) {
             commits = (List<Commit>) savedInstanceState.getSerializable(BUNDLE_COMMITS_KEY);
@@ -54,7 +50,7 @@ public class CommitsPresenter extends BasePresenter<CommitsView> {
 
 
     private void loadData() {
-        Subscription subscription = interactor.execute(new Subscriber<List<Commit>>() {
+        Subscription subscription = interactor.execute(getView().getRepoVO(),new Subscriber<List<Commit>>() {
             @Override
             public void onCompleted() {
 

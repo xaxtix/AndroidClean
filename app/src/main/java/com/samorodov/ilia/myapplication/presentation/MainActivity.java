@@ -1,13 +1,16 @@
 package com.samorodov.ilia.myapplication.presentation;
 
-import android.support.v4.app.Fragment;
-import android.support.v7.app.AppCompatActivity;
+import android.app.Fragment;
+import android.app.FragmentTransaction;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 
 import com.samorodov.ilia.myapplication.R;
+import com.samorodov.ilia.myapplication.model.Repository;
 import com.samorodov.ilia.myapplication.presentation.commtis.CommitsFragment;
+import com.samorodov.ilia.myapplication.presentation.starting.StartingFragment;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements ActivityCallback {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -15,11 +18,24 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
 
-        android.app.Fragment fragment = getFragmentManager().findFragmentById(R.id.content);
+        Fragment fragment = getFragmentManager().findFragmentById(R.id.content);
         if (fragment == null) {
             getFragmentManager().beginTransaction()
-                    .replace(R.id.content, new CommitsFragment())
+                    .replace(R.id.content, new StartingFragment())
                     .commit();
         }
+    }
+
+    @Override
+    public void startCommitsFragment(Repository repository) {
+        addNewFragment(CommitsFragment.newInstance(repository));
+    }
+
+    public void addNewFragment(Fragment fragment) {
+        getFragmentManager().beginTransaction()
+                .setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN)
+                .replace(R.id.content, fragment)
+                .addToBackStack(null)
+                .commit();
     }
 }

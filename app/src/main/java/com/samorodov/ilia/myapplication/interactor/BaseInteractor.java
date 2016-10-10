@@ -12,13 +12,13 @@ import rx.functions.Func1;
 import rx.schedulers.Schedulers;
 import rx.subscriptions.Subscriptions;
 
-public abstract class BaseInteractor<T> {
+public abstract class BaseInteractor<Request,Response> {
 
-    protected abstract Observable<T> buildUseCaseObservable();
+    protected abstract Observable<Response> buildUseCaseObservable(Request request);
 
     @SuppressWarnings("unchecked")
-    public Subscription execute(Subscriber<T> subscriber) {
-        return this.buildUseCaseObservable()
+    public Subscription execute(Request request,Subscriber<Response> subscriber) {
+        return this.buildUseCaseObservable(request)
                 .subscribe(subscriber);
     }
 

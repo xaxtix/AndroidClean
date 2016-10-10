@@ -1,5 +1,6 @@
 package com.samorodov.ilia.myapplication.presentation.commtis;
 
+import android.app.Fragment;
 import android.content.res.Configuration;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -13,6 +14,7 @@ import android.widget.TextView;
 import com.samorodov.ilia.myapplication.R;
 import com.samorodov.ilia.myapplication.api.ApiInterface;
 import com.samorodov.ilia.myapplication.model.Commit;
+import com.samorodov.ilia.myapplication.model.Repository;
 import com.samorodov.ilia.myapplication.model.dto.CommitDTO;
 import com.samorodov.ilia.myapplication.presentation.base.BaseFragment;
 import com.samorodov.ilia.myapplication.presentation.base.BasePresenter;
@@ -26,11 +28,27 @@ import rx.Subscriber;
 
 public class CommitsFragment extends BaseFragment implements CommitsView {
 
+    private static final String BUNDLE_REPO_KEY = "BUNDLE_REPO_KEY";
+
     @Inject
     CommitsPresenter mCommitsPresenter;
 
     @BindView(R.id.list_view)
     ListView mListView;
+
+    public static CommitsFragment newInstance(Repository repo) {
+        CommitsFragment fragment = new CommitsFragment();
+
+        Bundle bundle = new Bundle();
+        bundle.putSerializable(BUNDLE_REPO_KEY,repo);
+        fragment.setArguments(bundle);
+        return fragment;
+    }
+
+    @Override
+    public Repository getRepoVO() {
+        return (Repository) getArguments().getSerializable(BUNDLE_REPO_KEY);
+    }
 
     @Override
     protected int getLayoutResource() {
@@ -77,5 +95,6 @@ public class CommitsFragment extends BaseFragment implements CommitsView {
     public void setCommits(final List<Commit> commits) {
         mListView.setAdapter(new CommitsAdapter(commits, getActivity()));
     }
+
 
 }

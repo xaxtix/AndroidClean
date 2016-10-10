@@ -1,3 +1,6 @@
 <resources>
     <string name="app_name">My Application</string>
+    <string name="owner">Owner</string>
+    <string name="repo">Repository</string>
+    <string name="showing">Show</string>
 </resources>

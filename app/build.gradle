@@ -45,6 +45,11 @@ dependencies {
     compile 'com.jakewharton:butterknife:8.4.0'
     apt 'com.jakewharton:butterknife-compiler:8.4.0'
 
+    //Leak Canary
+    debugCompile 'com.squareup.leakcanary:leakcanary-android:1.5'
+    releaseCompile 'com.squareup.leakcanary:leakcanary-android-no-op:1.5'
+    testCompile 'com.squareup.leakcanary:leakcanary-android-no-op:1.5'
+
     compile 'com.trello:rxlifecycle:0.8.0'
     compile 'com.trello:rxlifecycle-android:0.8.0'
     compile 'com.trello:rxlifecycle-components:0.8.0'

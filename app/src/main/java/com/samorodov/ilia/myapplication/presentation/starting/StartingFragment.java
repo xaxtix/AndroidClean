@@ -2,9 +2,12 @@ package com.samorodov.ilia.myapplication.presentation.starting;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.view.KeyEvent;
 import android.view.View;
+import android.view.inputmethod.EditorInfo;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 
 import com.samorodov.ilia.myapplication.R;
 import com.samorodov.ilia.myapplication.model.Repository;
@@ -55,6 +58,21 @@ public class StartingFragment extends BaseFragment implements StartingView{
                 String owner = mOwnerEditText.getText().toString();
                 String repo = mRepoEditText.getText().toString();
                 mPresenter.onNextClick(owner,repo);
+            }
+        });
+
+        mRepoEditText.setOnEditorActionListener(new TextView.OnEditorActionListener() {
+            @Override
+            public boolean onEditorAction(TextView v, int actionId, KeyEvent event) {
+                if (actionId == EditorInfo.IME_ACTION_DONE ||
+                        actionId == EditorInfo.IME_ACTION_NEXT ||
+                        actionId == EditorInfo.IME_ACTION_GO ||
+                        (event != null && event.getKeyCode() == KeyEvent.KEYCODE_ENTER)) {
+                    mNextButton.callOnClick();
+                    return true;
+                } else {
+                    return false;
+                }
             }
         });
     }

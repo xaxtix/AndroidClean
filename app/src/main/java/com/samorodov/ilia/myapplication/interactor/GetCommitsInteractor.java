@@ -12,6 +12,7 @@ import javax.inject.Named;
 
 import rx.Observable;
 import rx.Scheduler;
+import rx.functions.Func1;
 
 public class GetCommitsInteractor extends BaseInteractor<List<Commit>> {
 
@@ -30,10 +31,13 @@ public class GetCommitsInteractor extends BaseInteractor<List<Commit>> {
     }
 
 
+
+
     @Override
     protected Observable<List<Commit>> buildUseCaseObservable() {
         return repository.getCommits()
                 .subscribeOn(job)
-                .observeOn(ui);
+                .observeOn(ui)
+                .unsubscribeOn(job);
     }
 }

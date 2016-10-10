@@ -1,5 +1,6 @@
 package com.samorodov.ilia.myapplication.presentation;
 
+import android.support.v4.app.Fragment;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
@@ -13,8 +14,12 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        getFragmentManager().beginTransaction()
-                .replace(R.id.content,new CommitsFragment())
-                .commit();
+
+        android.app.Fragment fragment = getFragmentManager().findFragmentById(R.id.content);
+        if (fragment == null) {
+            getFragmentManager().beginTransaction()
+                    .replace(R.id.content, new CommitsFragment())
+                    .commit();
+        }
     }
 }

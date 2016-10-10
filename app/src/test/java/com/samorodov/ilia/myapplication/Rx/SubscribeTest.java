@@ -3,7 +3,6 @@ package com.samorodov.ilia.myapplication.Rx;
 import org.junit.Test;
 
 import rx.Observable;
-import rx.Scheduler;
 import rx.Subscriber;
 import rx.Subscription;
 import rx.schedulers.Schedulers;
@@ -36,7 +35,7 @@ public class SubscribeTest {
                 subscriber.onCompleted();
 
             }
-        });
+        }).cache();
 
         final String[] str = new String[1];
 
@@ -59,10 +58,10 @@ public class SubscribeTest {
             }
         };
 
-        observable.observeOn(Schedulers.newThread())
+        Subscription subscription = observable.observeOn(Schedulers.newThread())
                 .subscribe(subscriber);
 
-        subscriber.unsubscribe();
+        subscription.unsubscribe();
 
         observable.observeOn(Schedulers.newThread())
                 .subscribe(new Subscriber<String>() {
@@ -89,6 +88,8 @@ public class SubscribeTest {
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
+
+
 
 
         assertEquals(str[0], "Hello Wrold");

@@ -15,6 +15,7 @@ import com.samorodov.ilia.myapplication.api.ApiInterface;
 import com.samorodov.ilia.myapplication.model.Commit;
 import com.samorodov.ilia.myapplication.model.dto.CommitDTO;
 import com.samorodov.ilia.myapplication.presentation.base.BaseFragment;
+import com.samorodov.ilia.myapplication.presentation.base.BasePresenter;
 
 import java.util.List;
 
@@ -41,34 +42,30 @@ public class CommitsFragment extends BaseFragment implements CommitsView {
         getInjector().inject(this);
     }
 
+    @Nullable
+    @Override
+    protected BasePresenter getPresenter() {
+        return mCommitsPresenter;
+    }
+
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         mCommitsPresenter.onCreate(this);
     }
 
+    @Nullable
     @Override
-    public void onViewCreated(View view, Bundle savedInstanceState) {
-        super.onViewCreated(view, savedInstanceState);
-        mCommitsPresenter.onStart();
+    public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
+        View view = super.onCreateView(inflater, container, savedInstanceState);
+        mCommitsPresenter.onCreateView(savedInstanceState);
+        return view;
     }
 
     @Override
-    public void onDestroy() {
-        super.onDestroy();
-         if(isRemoving() || getActivity().isFinishing()) {
-             mCommitsPresenter.onDestroy();
-         }
-    }
-
-    @Override
-    public void setRetainInstance(boolean retain) {
-        super.setRetainInstance(retain);
-    }
-
-    @Override
-    public void onConfigurationChanged(Configuration newConfig) {
-        super.onConfigurationChanged(newConfig);
+    public void onSaveInstanceState(Bundle outState) {
+        super.onSaveInstanceState(outState);
+        mCommitsPresenter.onSaveInstanceState(outState);
     }
 
     @Override

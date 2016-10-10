@@ -19,7 +19,7 @@ public class SchedulersModule {
     @Singleton
     @Named(JOB)
     public Scheduler provideJobScheduler() {
-        return Schedulers.computation();
+        return Schedulers.io();
     }
 
     @Provides

@@ -1,6 +1,8 @@
 package com.samorodov.ilia.myapplication.model;
 
-public class Commit {
+import java.io.Serializable;
+
+public class Commit implements Serializable{
 
     String author;
 

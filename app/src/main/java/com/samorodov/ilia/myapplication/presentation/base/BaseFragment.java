@@ -25,11 +25,21 @@ public abstract class BaseFragment extends Fragment {
 
     protected abstract void inject();
 
+    @Nullable
+    protected abstract BasePresenter getPresenter();
 
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         inject();
+    }
+
+    @Override
+    public void onStop() {
+        super.onStop();
+        if (getPresenter() != null) {
+            getPresenter().onStop();
+        }
     }
 
     @Nullable

@@ -2,18 +2,14 @@ package com.samorodov.ilia.myapplication.presentation;
 
 import com.samorodov.ilia.myapplication.BaseTest;
 import com.samorodov.ilia.myapplication.interactor.GetCommitsInteractor;
-import com.samorodov.ilia.myapplication.interactor.SubscriberAdapter;
-import com.samorodov.ilia.myapplication.presentation.base.BasePresenter;
 import com.samorodov.ilia.myapplication.presentation.commtis.CommitsPresenter;
 import com.samorodov.ilia.myapplication.presentation.commtis.CommitsView;
 
 import org.junit.Before;
 import org.junit.Test;
 
-import static org.mockito.Mockito.verify;
-
 import static org.mockito.Mockito.mock;
-import static org.mockito.Mockito.when;
+import static org.mockito.Mockito.verify;
 
 public class CommitsPresenterTest extends BaseTest {
 
@@ -32,7 +28,6 @@ public class CommitsPresenterTest extends BaseTest {
         interactor = mock(GetCommitsInteractor.class);
 
         presenter = new CommitsPresenter(interactor);
-
         presenter.onCreate(commitsView);
     }
 

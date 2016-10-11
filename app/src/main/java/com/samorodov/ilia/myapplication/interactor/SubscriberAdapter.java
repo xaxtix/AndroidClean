@@ -32,8 +32,9 @@ public class SubscriberAdapter<T> extends Subscriber<T> {
 
     @Override
     public void onNext(T t) {
-        assert nextListener != null;
-        nextListener.onNext(t);
+        if (nextListener != null) {
+            nextListener.onNext(t);
+        }
     }
 
     public interface OnErrorListener {

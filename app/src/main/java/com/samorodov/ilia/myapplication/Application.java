@@ -8,7 +8,7 @@ import com.squareup.leakcanary.LeakCanary;
 
 public class Application extends android.app.Application {
 
-    AppComponent mInjector;
+    static AppComponent mInjector;
 
     @Override
     public void onCreate() {
@@ -19,13 +19,17 @@ public class Application extends android.app.Application {
         }
         LeakCanary.install(this);
 
-        mInjector = DaggerAppComponent.builder()
+        mInjector = BuildInjector();
+    }
+
+    protected AppComponent BuildInjector() {
+        return DaggerAppComponent.builder()
                 .apiModule(new ApiModule())
                 .applicationModule(new ApplicationModule(this))
                 .build();
     }
 
-    public AppComponent getInjector() {
+    public static AppComponent getInjector() {
         return mInjector;
     }
 }

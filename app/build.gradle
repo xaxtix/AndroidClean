@@ -61,6 +61,11 @@ dependencies {
     releaseCompile 'com.squareup.leakcanary:leakcanary-android-no-op:1.5'
     testCompile 'com.squareup.leakcanary:leakcanary-android-no-op:1.5'
 
+    // Robolectric (Unit Test)
+    testCompile 'org.robolectric:robolectric:3.0'
+    //Mockito (create mock's objects)
+    testCompile 'org.mockito:mockito-core:1.10.19'
+
 
 
     compile 'com.trello:rxlifecycle:0.8.0'

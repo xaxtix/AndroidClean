@@ -1,0 +1,438 @@
+[
+  {
+    "sha": "6001de6d61629ca0d2d3a4595f09871c140bc175",
+    "commit": {
+      "author": {
+        "name": "Илья Самородов",
+        "email": "is@poloniumarts.com",
+        "date": "2016-10-11T09:43:03Z"
+      },
+      "committer": {
+        "name": "Илья Самородов",
+        "email": "is@poloniumarts.com",
+        "date": "2016-10-11T09:43:03Z"
+      },
+      "message": "Удалил .idea, projectBackupFiles",
+      "tree": {
+        "sha": "838f64600956786bb4c7ddccdbc636155eb3cb69",
+        "url": "https://api.github.com/repos/xaxtix/AndroidClean/git/trees/838f64600956786bb4c7ddccdbc636155eb3cb69"
+      },
+      "url": "https://api.github.com/repos/xaxtix/AndroidClean/git/commits/6001de6d61629ca0d2d3a4595f09871c140bc175",
+      "comment_count": 0
+    },
+    "url": "https://api.github.com/repos/xaxtix/AndroidClean/commits/6001de6d61629ca0d2d3a4595f09871c140bc175",
+    "html_url": "https://github.com/xaxtix/AndroidClean/commit/6001de6d61629ca0d2d3a4595f09871c140bc175",
+    "comments_url": "https://api.github.com/repos/xaxtix/AndroidClean/commits/6001de6d61629ca0d2d3a4595f09871c140bc175/comments",
+    "author": null,
+    "committer": null,
+    "parents": [
+      {
+        "sha": "eab6584790592b341c72d328eb7a42c584cf3134",
+        "url": "https://api.github.com/repos/xaxtix/AndroidClean/commits/eab6584790592b341c72d328eb7a42c584cf3134",
+        "html_url": "https://github.com/xaxtix/AndroidClean/commit/eab6584790592b341c72d328eb7a42c584cf3134"
+      }
+    ]
+  },
+  {
+    "sha": "eab6584790592b341c72d328eb7a42c584cf3134",
+    "commit": {
+      "author": {
+        "name": "Илья Самородов",
+        "email": "is@poloniumarts.com",
+        "date": "2016-10-11T09:39:54Z"
+      },
+      "committer": {
+        "name": "Илья Самородов",
+        "email": "is@poloniumarts.com",
+        "date": "2016-10-11T09:39:54Z"
+      },
+      "message": "Обновил .gitignore",
+      "tree": {
+        "sha": "67d670bc659c6bef294d8c0a8a46fa3a9b98b3dc",
+        "url": "https://api.github.com/repos/xaxtix/AndroidClean/git/trees/67d670bc659c6bef294d8c0a8a46fa3a9b98b3dc"
+      },
+      "url": "https://api.github.com/repos/xaxtix/AndroidClean/git/commits/eab6584790592b341c72d328eb7a42c584cf3134",
+      "comment_count": 0
+    },
+    "url": "https://api.github.com/repos/xaxtix/AndroidClean/commits/eab6584790592b341c72d328eb7a42c584cf3134",
+    "html_url": "https://github.com/xaxtix/AndroidClean/commit/eab6584790592b341c72d328eb7a42c584cf3134",
+    "comments_url": "https://api.github.com/repos/xaxtix/AndroidClean/commits/eab6584790592b341c72d328eb7a42c584cf3134/comments",
+    "author": null,
+    "committer": null,
+    "parents": [
+      {
+        "sha": "e3e35874ea512da170ab35ca1776d779c63a63c8",
+        "url": "https://api.github.com/repos/xaxtix/AndroidClean/commits/e3e35874ea512da170ab35ca1776d779c63a63c8",
+        "html_url": "https://github.com/xaxtix/AndroidClean/commit/e3e35874ea512da170ab35ca1776d779c63a63c8"
+      }
+    ]
+  },
+  {
+    "sha": "e3e35874ea512da170ab35ca1776d779c63a63c8",
+    "commit": {
+      "author": {
+        "name": "Илья Самородов",
+        "email": "is@poloniumarts.com",
+        "date": "2016-10-11T09:35:19Z"
+      },
+      "committer": {
+        "name": "Илья Самородов",
+        "email": "is@poloniumarts.com",
+        "date": "2016-10-11T09:35:19Z"
+      },
+      "message": "Добавил retroLambda plugin, SubscriberAdapter. Отформатировал код",
+      "tree": {
+        "sha": "3750704e7e1eb82077a6cffc13dde1d33b827da2",
+        "url": "https://api.github.com/repos/xaxtix/AndroidClean/git/trees/3750704e7e1eb82077a6cffc13dde1d33b827da2"
+      },
+      "url": "https://api.github.com/repos/xaxtix/AndroidClean/git/commits/e3e35874ea512da170ab35ca1776d779c63a63c8",
+      "comment_count": 0
+    },
+    "url": "https://api.github.com/repos/xaxtix/AndroidClean/commits/e3e35874ea512da170ab35ca1776d779c63a63c8",
+    "html_url": "https://github.com/xaxtix/AndroidClean/commit/e3e35874ea512da170ab35ca1776d779c63a63c8",
+    "comments_url": "https://api.github.com/repos/xaxtix/AndroidClean/commits/e3e35874ea512da170ab35ca1776d779c63a63c8/comments",
+    "author": null,
+    "committer": null,
+    "parents": [
+      {
+        "sha": "bf020daf7442590a625cac9fd821c7be6c7ce254",
+        "url": "https://api.github.com/repos/xaxtix/AndroidClean/commits/bf020daf7442590a625cac9fd821c7be6c7ce254",
+        "html_url": "https://github.com/xaxtix/AndroidClean/commit/bf020daf7442590a625cac9fd821c7be6c7ce254"
+      }
+    ]
+  },
+  {
+    "sha": "bf020daf7442590a625cac9fd821c7be6c7ce254",
+    "commit": {
+      "author": {
+        "name": "Илья Самородов",
+        "email": "is@poloniumarts.com",
+        "date": "2016-10-11T09:06:41Z"
+      },
+      "committer": {
+        "name": "Илья Самородов",
+        "email": "is@poloniumarts.com",
+        "date": "2016-10-11T09:06:41Z"
+      },
+      "message": "Добавил прогресс бар для CommitsFragment",
+      "tree": {
+        "sha": "47c14d6107e035ff473574e4cdf99f8e545627d6",
+        "url": "https://api.github.com/repos/xaxtix/AndroidClean/git/trees/47c14d6107e035ff473574e4cdf99f8e545627d6"
+      },
+      "url": "https://api.github.com/repos/xaxtix/AndroidClean/git/commits/bf020daf7442590a625cac9fd821c7be6c7ce254",
+      "comment_count": 0
+    },
+    "url": "https://api.github.com/repos/xaxtix/AndroidClean/commits/bf020daf7442590a625cac9fd821c7be6c7ce254",
+    "html_url": "https://github.com/xaxtix/AndroidClean/commit/bf020daf7442590a625cac9fd821c7be6c7ce254",
+    "comments_url": "https://api.github.com/repos/xaxtix/AndroidClean/commits/bf020daf7442590a625cac9fd821c7be6c7ce254/comments",
+    "author": null,
+    "committer": null,
+    "parents": [
+      {
+        "sha": "bd531457da5777553f038eb63b962b227a903af1",
+        "url": "https://api.github.com/repos/xaxtix/AndroidClean/commits/bd531457da5777553f038eb63b962b227a903af1",
+        "html_url": "https://github.com/xaxtix/AndroidClean/commit/bd531457da5777553f038eb63b962b227a903af1"
+      }
+    ]
+  },
+  {
+    "sha": "bd531457da5777553f038eb63b962b227a903af1",
+    "commit": {
+      "author": {
+        "name": "Илья Самородов",
+        "email": "is@poloniumarts.com",
+        "date": "2016-10-11T09:00:50Z"
+      },
+      "committer": {
+        "name": "Илья Самородов",
+        "email": "is@poloniumarts.com",
+        "date": "2016-10-11T09:00:50Z"
+      },
+      "message": "ListView --> RecyclerView",
+      "tree": {
+        "sha": "f48b3629bc9c0ea5f9b9747ac0643ea418ba785d",
+        "url": "https://api.github.com/repos/xaxtix/AndroidClean/git/trees/f48b3629bc9c0ea5f9b9747ac0643ea418ba785d"
+      },
+      "url": "https://api.github.com/repos/xaxtix/AndroidClean/git/commits/bd531457da5777553f038eb63b962b227a903af1",
+      "comment_count": 0
+    },
+    "url": "https://api.github.com/repos/xaxtix/AndroidClean/commits/bd531457da5777553f038eb63b962b227a903af1",
+    "html_url": "https://github.com/xaxtix/AndroidClean/commit/bd531457da5777553f038eb63b962b227a903af1",
+    "comments_url": "https://api.github.com/repos/xaxtix/AndroidClean/commits/bd531457da5777553f038eb63b962b227a903af1/comments",
+    "author": null,
+    "committer": null,
+    "parents": [
+      {
+        "sha": "634a554c2e2226bb1a978429bb490b6bc077eba1",
+        "url": "https://api.github.com/repos/xaxtix/AndroidClean/commits/634a554c2e2226bb1a978429bb490b6bc077eba1",
+        "html_url": "https://github.com/xaxtix/AndroidClean/commit/634a554c2e2226bb1a978429bb490b6bc077eba1"
+      }
+    ]
+  },
+  {
+    "sha": "634a554c2e2226bb1a978429bb490b6bc077eba1",
+    "commit": {
+      "author": {
+        "name": "Илья Самородов",
+        "email": "is@poloniumarts.com",
+        "date": "2016-10-11T08:49:00Z"
+      },
+      "committer": {
+        "name": "Илья Самородов",
+        "email": "is@poloniumarts.com",
+        "date": "2016-10-11T08:49:00Z"
+      },
+      "message": "Вынес методы жизненнгого цикла в абстракцию, для презентера и фрагмента",
+      "tree": {
+        "sha": "b56bd388c0f458684b43a92005b5309ca24b3130",
+        "url": "https://api.github.com/repos/xaxtix/AndroidClean/git/trees/b56bd388c0f458684b43a92005b5309ca24b3130"
+      },
+      "url": "https://api.github.com/repos/xaxtix/AndroidClean/git/commits/634a554c2e2226bb1a978429bb490b6bc077eba1",
+      "comment_count": 0
+    },
+    "url": "https://api.github.com/repos/xaxtix/AndroidClean/commits/634a554c2e2226bb1a978429bb490b6bc077eba1",
+    "html_url": "https://github.com/xaxtix/AndroidClean/commit/634a554c2e2226bb1a978429bb490b6bc077eba1",
+    "comments_url": "https://api.github.com/repos/xaxtix/AndroidClean/commits/634a554c2e2226bb1a978429bb490b6bc077eba1/comments",
+    "author": null,
+    "committer": null,
+    "parents": [
+      {
+        "sha": "dd22f6308647eeea061d667b044d9ecbbd2aa702",
+        "url": "https://api.github.com/repos/xaxtix/AndroidClean/commits/dd22f6308647eeea061d667b044d9ecbbd2aa702",
+        "html_url": "https://github.com/xaxtix/AndroidClean/commit/dd22f6308647eeea061d667b044d9ecbbd2aa702"
+      }
+    ]
+  },
+  {
+    "sha": "dd22f6308647eeea061d667b044d9ecbbd2aa702",
+    "commit": {
+      "author": {
+        "name": "Илья Самородов",
+        "email": "is@poloniumarts.com",
+        "date": "2016-10-10T22:40:47Z"
+      },
+      "committer": {
+        "name": "Илья Самородов",
+        "email": "is@poloniumarts.com",
+        "date": "2016-10-10T22:40:47Z"
+      },
+      "message": "Пофиксил утечку памяти. Добавил обработку поворота для диалога",
+      "tree": {
+        "sha": "cc805ff8cf601c068c272672d6e7cc368656ed6f",
+        "url": "https://api.github.com/repos/xaxtix/AndroidClean/git/trees/cc805ff8cf601c068c272672d6e7cc368656ed6f"
+      },
+      "url": "https://api.github.com/repos/xaxtix/AndroidClean/git/commits/dd22f6308647eeea061d667b044d9ecbbd2aa702",
+      "comment_count": 0
+    },
+    "url": "https://api.github.com/repos/xaxtix/AndroidClean/commits/dd22f6308647eeea061d667b044d9ecbbd2aa702",
+    "html_url": "https://github.com/xaxtix/AndroidClean/commit/dd22f6308647eeea061d667b044d9ecbbd2aa702",
+    "comments_url": "https://api.github.com/repos/xaxtix/AndroidClean/commits/dd22f6308647eeea061d667b044d9ecbbd2aa702/comments",
+    "author": null,
+    "committer": null,
+    "parents": [
+      {
+        "sha": "1390303238d3b790a5ff614efd70313c3d0be04e",
+        "url": "https://api.github.com/repos/xaxtix/AndroidClean/commits/1390303238d3b790a5ff614efd70313c3d0be04e",
+        "html_url": "https://github.com/xaxtix/AndroidClean/commit/1390303238d3b790a5ff614efd70313c3d0be04e"
+      }
+    ]
+  },
+  {
+    "sha": "1390303238d3b790a5ff614efd70313c3d0be04e",
+    "commit": {
+      "author": {
+        "name": "Илья Самородов",
+        "email": "is@poloniumarts.com",
+        "date": "2016-10-10T11:40:00Z"
+      },
+      "committer": {
+        "name": "Илья Самородов",
+        "email": "is@poloniumarts.com",
+        "date": "2016-10-10T11:40:00Z"
+      },
+      "message": "Добавил обработчик ошибок",
+      "tree": {
+        "sha": "39035cdcd5fdd8d7f9ee98577772f7917eb121f0",
+        "url": "https://api.github.com/repos/xaxtix/AndroidClean/git/trees/39035cdcd5fdd8d7f9ee98577772f7917eb121f0"
+      },
+      "url": "https://api.github.com/repos/xaxtix/AndroidClean/git/commits/1390303238d3b790a5ff614efd70313c3d0be04e",
+      "comment_count": 0
+    },
+    "url": "https://api.github.com/repos/xaxtix/AndroidClean/commits/1390303238d3b790a5ff614efd70313c3d0be04e",
+    "html_url": "https://github.com/xaxtix/AndroidClean/commit/1390303238d3b790a5ff614efd70313c3d0be04e",
+    "comments_url": "https://api.github.com/repos/xaxtix/AndroidClean/commits/1390303238d3b790a5ff614efd70313c3d0be04e/comments",
+    "author": null,
+    "committer": null,
+    "parents": [
+      {
+        "sha": "b4da9226a36b55f4178782643e2b3e87bc27ac77",
+        "url": "https://api.github.com/repos/xaxtix/AndroidClean/commits/b4da9226a36b55f4178782643e2b3e87bc27ac77",
+        "html_url": "https://github.com/xaxtix/AndroidClean/commit/b4da9226a36b55f4178782643e2b3e87bc27ac77"
+      }
+    ]
+  },
+  {
+    "sha": "b4da9226a36b55f4178782643e2b3e87bc27ac77",
+    "commit": {
+      "author": {
+        "name": "Илья Самородов",
+        "email": "is@poloniumarts.com",
+        "date": "2016-10-10T11:15:36Z"
+      },
+      "committer": {
+        "name": "Илья Самородов",
+        "email": "is@poloniumarts.com",
+        "date": "2016-10-10T11:15:36Z"
+      },
+      "message": "Добавил переход на фрагемнт коммитов из EditText'a",
+      "tree": {
+        "sha": "76c881b82fb087e9871098830e4cf7a8e4d4104c",
+        "url": "https://api.github.com/repos/xaxtix/AndroidClean/git/trees/76c881b82fb087e9871098830e4cf7a8e4d4104c"
+      },
+      "url": "https://api.github.com/repos/xaxtix/AndroidClean/git/commits/b4da9226a36b55f4178782643e2b3e87bc27ac77",
+      "comment_count": 0
+    },
+    "url": "https://api.github.com/repos/xaxtix/AndroidClean/commits/b4da9226a36b55f4178782643e2b3e87bc27ac77",
+    "html_url": "https://github.com/xaxtix/AndroidClean/commit/b4da9226a36b55f4178782643e2b3e87bc27ac77",
+    "comments_url": "https://api.github.com/repos/xaxtix/AndroidClean/commits/b4da9226a36b55f4178782643e2b3e87bc27ac77/comments",
+    "author": null,
+    "committer": null,
+    "parents": [
+      {
+        "sha": "c365cc0b2fef09a8758698ab78f59126053fb432",
+        "url": "https://api.github.com/repos/xaxtix/AndroidClean/commits/c365cc0b2fef09a8758698ab78f59126053fb432",
+        "html_url": "https://github.com/xaxtix/AndroidClean/commit/c365cc0b2fef09a8758698ab78f59126053fb432"
+      }
+    ]
+  },
+  {
+    "sha": "c365cc0b2fef09a8758698ab78f59126053fb432",
+    "commit": {
+      "author": {
+        "name": "Илья Самородов",
+        "email": "is@poloniumarts.com",
+        "date": "2016-10-10T10:56:26Z"
+      },
+      "committer": {
+        "name": "Илья Самородов",
+        "email": "is@poloniumarts.com",
+        "date": "2016-10-10T10:56:26Z"
+      },
+      "message": "add| starting fragment | activity callback",
+      "tree": {
+        "sha": "4c0a7bbc04b33ea97c60aaf06fe4257b6c054456",
+        "url": "https://api.github.com/repos/xaxtix/AndroidClean/git/trees/4c0a7bbc04b33ea97c60aaf06fe4257b6c054456"
+      },
+      "url": "https://api.github.com/repos/xaxtix/AndroidClean/git/commits/c365cc0b2fef09a8758698ab78f59126053fb432",
+      "comment_count": 0
+    },
+    "url": "https://api.github.com/repos/xaxtix/AndroidClean/commits/c365cc0b2fef09a8758698ab78f59126053fb432",
+    "html_url": "https://github.com/xaxtix/AndroidClean/commit/c365cc0b2fef09a8758698ab78f59126053fb432",
+    "comments_url": "https://api.github.com/repos/xaxtix/AndroidClean/commits/c365cc0b2fef09a8758698ab78f59126053fb432/comments",
+    "author": null,
+    "committer": null,
+    "parents": [
+      {
+        "sha": "80e67b09d8f9c932591c62ce45c75056b70e2cbd",
+        "url": "https://api.github.com/repos/xaxtix/AndroidClean/commits/80e67b09d8f9c932591c62ce45c75056b70e2cbd",
+        "html_url": "https://github.com/xaxtix/AndroidClean/commit/80e67b09d8f9c932591c62ce45c75056b70e2cbd"
+      }
+    ]
+  },
+  {
+    "sha": "80e67b09d8f9c932591c62ce45c75056b70e2cbd",
+    "commit": {
+      "author": {
+        "name": "Илья Самородов",
+        "email": "is@poloniumarts.com",
+        "date": "2016-10-10T09:02:43Z"
+      },
+      "committer": {
+        "name": "Илья Самородов",
+        "email": "is@poloniumarts.com",
+        "date": "2016-10-10T09:02:43Z"
+      },
+      "message": "remove sleep on request",
+      "tree": {
+        "sha": "48c919525723d82a07388952c30a751484c1cba9",
+        "url": "https://api.github.com/repos/xaxtix/AndroidClean/git/trees/48c919525723d82a07388952c30a751484c1cba9"
+      },
+      "url": "https://api.github.com/repos/xaxtix/AndroidClean/git/commits/80e67b09d8f9c932591c62ce45c75056b70e2cbd",
+      "comment_count": 0
+    },
+    "url": "https://api.github.com/repos/xaxtix/AndroidClean/commits/80e67b09d8f9c932591c62ce45c75056b70e2cbd",
+    "html_url": "https://github.com/xaxtix/AndroidClean/commit/80e67b09d8f9c932591c62ce45c75056b70e2cbd",
+    "comments_url": "https://api.github.com/repos/xaxtix/AndroidClean/commits/80e67b09d8f9c932591c62ce45c75056b70e2cbd/comments",
+    "author": null,
+    "committer": null,
+    "parents": [
+      {
+        "sha": "410e81c762a5f93c0ac60151236b02123466788d",
+        "url": "https://api.github.com/repos/xaxtix/AndroidClean/commits/410e81c762a5f93c0ac60151236b02123466788d",
+        "html_url": "https://github.com/xaxtix/AndroidClean/commit/410e81c762a5f93c0ac60151236b02123466788d"
+      }
+    ]
+  },
+  {
+    "sha": "410e81c762a5f93c0ac60151236b02123466788d",
+    "commit": {
+      "author": {
+        "name": "Илья Самородов",
+        "email": "is@poloniumarts.com",
+        "date": "2016-10-10T08:52:54Z"
+      },
+      "committer": {
+        "name": "Илья Самородов",
+        "email": "is@poloniumarts.com",
+        "date": "2016-10-10T08:52:54Z"
+      },
+      "message": "add| handle of orientation change",
+      "tree": {
+        "sha": "f36aa454809fde5b050c25938d7a2d9b3d1bfd98",
+        "url": "https://api.github.com/repos/xaxtix/AndroidClean/git/trees/f36aa454809fde5b050c25938d7a2d9b3d1bfd98"
+      },
+      "url": "https://api.github.com/repos/xaxtix/AndroidClean/git/commits/410e81c762a5f93c0ac60151236b02123466788d",
+      "comment_count": 0
+    },
+    "url": "https://api.github.com/repos/xaxtix/AndroidClean/commits/410e81c762a5f93c0ac60151236b02123466788d",
+    "html_url": "https://github.com/xaxtix/AndroidClean/commit/410e81c762a5f93c0ac60151236b02123466788d",
+    "comments_url": "https://api.github.com/repos/xaxtix/AndroidClean/commits/410e81c762a5f93c0ac60151236b02123466788d/comments",
+    "author": null,
+    "committer": null,
+    "parents": [
+      {
+        "sha": "ec32482fcfd17fdbb2b2fd02e4f98fefe76747db",
+        "url": "https://api.github.com/repos/xaxtix/AndroidClean/commits/ec32482fcfd17fdbb2b2fd02e4f98fefe76747db",
+        "html_url": "https://github.com/xaxtix/AndroidClean/commit/ec32482fcfd17fdbb2b2fd02e4f98fefe76747db"
+      }
+    ]
+  },
+  {
+    "sha": "ec32482fcfd17fdbb2b2fd02e4f98fefe76747db",
+    "commit": {
+      "author": {
+        "name": "Илья Самородов",
+        "email": "is@poloniumarts.com",
+        "date": "2016-10-09T16:33:01Z"
+      },
+      "committer": {
+        "name": "Илья Самородов",
+        "email": "is@poloniumarts.com",
+        "date": "2016-10-09T16:33:01Z"
+      },
+      "message": "initial",
+      "tree": {
+        "sha": "0636c809c01ce39afbe3e233aefc85e269b7c0a5",
+        "url": "https://api.github.com/repos/xaxtix/AndroidClean/git/trees/0636c809c01ce39afbe3e233aefc85e269b7c0a5"
+      },
+      "url": "https://api.github.com/repos/xaxtix/AndroidClean/git/commits/ec32482fcfd17fdbb2b2fd02e4f98fefe76747db",
+      "comment_count": 0
+    },
+    "url": "https://api.github.com/repos/xaxtix/AndroidClean/commits/ec32482fcfd17fdbb2b2fd02e4f98fefe76747db",
+    "html_url": "https://github.com/xaxtix/AndroidClean/commit/ec32482fcfd17fdbb2b2fd02e4f98fefe76747db",
+    "comments_url": "https://api.github.com/repos/xaxtix/AndroidClean/commits/ec32482fcfd17fdbb2b2fd02e4f98fefe76747db/comments",
+    "author": null,
+    "committer": null,
+    "parents": []
+  }
+]

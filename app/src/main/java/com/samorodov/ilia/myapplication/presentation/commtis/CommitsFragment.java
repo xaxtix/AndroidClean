@@ -5,6 +5,7 @@ import android.support.annotation.Nullable;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
+import android.widget.ProgressBar;
 
 import com.samorodov.ilia.myapplication.R;
 import com.samorodov.ilia.myapplication.exception.ErrorBundle;
@@ -28,6 +29,9 @@ public class CommitsFragment extends BaseFragment implements CommitsView {
 
     @BindView(R.id.recycler_view)
     RecyclerView mRecycler;
+
+    @BindView(R.id.progressBar)
+    ProgressBar mProgressBar;
 
     public static CommitsFragment newInstance(Repository repo) {
         CommitsFragment fragment = new CommitsFragment();
@@ -76,9 +80,18 @@ public class CommitsFragment extends BaseFragment implements CommitsView {
         super.showError(e);
     }
 
+    @Override
+    public void showProgress() {
+        mProgressBar.setVisibility(View.VISIBLE);
+        mRecycler.setVisibility(View.GONE);
+    }
+
 
     @Override
     public void setCommits(final List<Commit> commits) {
+        mProgressBar.setVisibility(View.GONE);
+        mRecycler.setVisibility(View.VISIBLE);
+
         mRecycler.setAdapter(new CommitsAdapter(commits, getActivity()));
     }
 

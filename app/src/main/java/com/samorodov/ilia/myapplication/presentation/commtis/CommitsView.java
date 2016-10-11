@@ -10,6 +10,8 @@ public interface CommitsView {
 
     void showError(ErrorBundle e);
 
+    void showProgress();
+
     void setCommits(List<Commit> commits);
 
     Repository getRepoVO();

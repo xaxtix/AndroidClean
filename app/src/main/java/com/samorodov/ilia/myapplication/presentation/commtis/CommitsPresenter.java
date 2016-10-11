@@ -56,6 +56,8 @@ public class CommitsPresenter extends BasePresenter<CommitsView> {
 
 
     private void loadData() {
+        getView().showProgress();
+
         Subscription subscription = interactor.execute(getView().getRepoVO(),new Subscriber<List<Commit>>() {
             @Override
             public void onCompleted() {

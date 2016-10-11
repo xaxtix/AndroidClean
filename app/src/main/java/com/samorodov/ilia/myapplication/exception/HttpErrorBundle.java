@@ -11,7 +11,7 @@ public class HttpErrorBundle implements ErrorBundle {
     }
 
     @Override
-    public Throwable exception() {
+    public Throwable getException() {
         return e;
     }
 

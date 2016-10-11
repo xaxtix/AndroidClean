@@ -9,7 +9,7 @@ public class DefaultErrorBundle implements ErrorBundle{
     }
 
     @Override
-    public Throwable exception() {
+    public Throwable getException() {
         return e;
     }
 

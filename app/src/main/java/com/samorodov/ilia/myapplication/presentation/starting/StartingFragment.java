@@ -52,27 +52,21 @@ public class StartingFragment extends BaseFragment implements StartingView{
     public void onViewCreated(View view, Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
-        mNextButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                String owner = mOwnerEditText.getText().toString();
-                String repo = mRepoEditText.getText().toString();
-                mPresenter.onNextClick(owner,repo);
-            }
+        mNextButton.setOnClickListener(v -> {
+            String owner = mOwnerEditText.getText().toString();
+            String repo = mRepoEditText.getText().toString();
+            mPresenter.onNextClick(owner,repo);
         });
 
-        mRepoEditText.setOnEditorActionListener(new TextView.OnEditorActionListener() {
-            @Override
-            public boolean onEditorAction(TextView v, int actionId, KeyEvent event) {
-                if (actionId == EditorInfo.IME_ACTION_DONE ||
-                        actionId == EditorInfo.IME_ACTION_NEXT ||
-                        actionId == EditorInfo.IME_ACTION_GO ||
-                        (event != null && event.getKeyCode() == KeyEvent.KEYCODE_ENTER)) {
-                    mNextButton.callOnClick();
-                    return true;
-                } else {
-                    return false;
-                }
+        mRepoEditText.setOnEditorActionListener((v, actionId, event) -> {
+            if (actionId == EditorInfo.IME_ACTION_DONE ||
+                    actionId == EditorInfo.IME_ACTION_NEXT ||
+                    actionId == EditorInfo.IME_ACTION_GO ||
+                    (event != null && event.getKeyCode() == KeyEvent.KEYCODE_ENTER)) {
+                mNextButton.callOnClick();
+                return true;
+            } else {
+                return false;
             }
         });
     }

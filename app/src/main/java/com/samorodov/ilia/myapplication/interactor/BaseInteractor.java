@@ -16,7 +16,6 @@ public abstract class BaseInteractor<Request,Response> {
 
     protected abstract Observable<Response> buildUseCaseObservable(Request request);
 
-    @SuppressWarnings("unchecked")
     public Subscription execute(Request request,Subscriber<Response> subscriber) {
         return this.buildUseCaseObservable(request)
                 .subscribe(subscriber);

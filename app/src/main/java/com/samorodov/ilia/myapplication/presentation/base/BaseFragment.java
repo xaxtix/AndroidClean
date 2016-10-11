@@ -2,7 +2,6 @@ package com.samorodov.ilia.myapplication.presentation.base;
 
 import android.app.AlertDialog;
 import android.app.Fragment;
-import android.content.DialogInterface;
 import android.os.Bundle;
 import android.support.annotation.LayoutRes;
 import android.support.annotation.Nullable;
@@ -103,12 +102,7 @@ public abstract class BaseFragment extends Fragment {
         AlertDialog dialog = new AlertDialog.Builder(getActivity())
                 .setTitle(e.getErrorTitle())
                 .setMessage(e.getMessage())
-                .setPositiveButton(R.string.ok, new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialog, int which) {
-                        getActivityCallback().back();
-                    }
-                })
+                .setPositiveButton(R.string.ok, (dialog1, which) -> getActivityCallback().back())
                 .show();
 
         mDialogRefence = new WeakReference<>(dialog);

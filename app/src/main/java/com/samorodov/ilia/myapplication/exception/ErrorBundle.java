@@ -4,7 +4,7 @@ import java.io.Serializable;
 
 public interface ErrorBundle extends Serializable{
 
-    Throwable exception();
+    Throwable getException();
 
     String getErrorTitle();
 

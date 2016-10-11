@@ -2,6 +2,7 @@ package com.samorodov.ilia.myapplication.presentation.commtis;
 
 import android.content.Context;
 import android.support.annotation.Nullable;
+import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -13,7 +14,10 @@ import com.samorodov.ilia.myapplication.model.Commit;
 
 import java.util.List;
 
-public class CommitsAdapter extends BaseAdapter {
+import butterknife.BindView;
+import butterknife.ButterKnife;
+
+public class CommitsAdapter extends RecyclerView.Adapter<CommitsAdapter.ViewHolder> {
 
     @Nullable
     final List<Commit> commits;
@@ -27,26 +31,39 @@ public class CommitsAdapter extends BaseAdapter {
     }
 
     @Override
-    public int getCount() {
+    public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+        return new ViewHolder(LayoutInflater.from(context).inflate(R.layout.v_commit,parent,false));
+    }
+
+    @Override
+    public void onBindViewHolder(ViewHolder holder, int position) {
+        assert commits != null;
+        Commit commit = commits.get(position);
+
+        holder.name.setText(commit.getAuthor());
+        holder.message.setText(commit.getMessage());
+
+    }
+
+    @Override
+    public int getItemCount() {
         return commits == null ? 0 : commits.size();
     }
 
-    @Override
-    public Object getItem(int i) {
-        return i;
+
+    public class ViewHolder extends RecyclerView.ViewHolder {
+
+        @BindView(R.id.name)
+        TextView name;
+
+        @BindView(R.id.message)
+        TextView message;
+
+        public ViewHolder(View itemView) {
+            super(itemView);
+            ButterKnife.bind(this,itemView);
+        }
     }
 
-    @Override
-    public long getItemId(int i) {
-        return i;
-    }
 
-    @Override
-    public View getView(int i, View view, ViewGroup viewGroup) {
-        View commitView = LayoutInflater.from(context).inflate(R.layout.v_commit, viewGroup, false);
-        ((TextView) commitView.findViewById(R.id.name)).setText(commits.get(i).getAuthor());
-        ((TextView) commitView.findViewById(R.id.message)).setText(commits.get(i).getMessage());
-
-        return commitView;
-    }
 }

@@ -12,7 +12,7 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="8dp">
 
-        <EditText
+        <android.support.design.widget.TextInputEditText
             android:id="@+id/owner_et"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -30,7 +30,7 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="8dp">
 
-        <EditText
+        <android.support.design.widget.TextInputEditText
             android:id="@+id/repo_et"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

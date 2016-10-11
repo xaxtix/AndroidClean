@@ -1,7 +1,6 @@
 package com.samorodov.ilia.myapplication.presentation.base;
 
 import android.app.AlertDialog;
-import android.app.DialogFragment;
 import android.app.Fragment;
 import android.content.DialogInterface;
 import android.os.Bundle;
@@ -13,16 +12,11 @@ import android.view.ViewGroup;
 
 import com.samorodov.ilia.myapplication.Application;
 import com.samorodov.ilia.myapplication.R;
-import com.samorodov.ilia.myapplication.exception.DefaultErrorBundle;
 import com.samorodov.ilia.myapplication.exception.ErrorBundle;
 import com.samorodov.ilia.myapplication.injection.component.AppComponent;
 import com.samorodov.ilia.myapplication.presentation.ActivityCallback;
-import com.trello.rxlifecycle.LifecycleProvider;
-import com.trello.rxlifecycle.components.RxFragment;
 
 import java.lang.ref.WeakReference;
-
-import javax.inject.Inject;
 
 import butterknife.ButterKnife;
 
@@ -53,6 +47,14 @@ public abstract class BaseFragment extends Fragment {
     }
 
     @Override
+    public void onStart() {
+        super.onStart();
+        if(getPresenter() != null){
+            getPresenter().onStart();
+        }
+    }
+
+    @Override
     public void onStop() {
         super.onStop();
         if (getPresenter() != null) {
@@ -71,8 +73,12 @@ public abstract class BaseFragment extends Fragment {
             showError(mErrorBundle);
         }
 
+        if (getPresenter() != null)
+            getPresenter().onCreateView(savedInstanceState);
+
         return view;
     }
+
 
     public AppComponent getInjector() {
         return ((Application) getActivity().getApplicationContext()).getInjector();
@@ -84,6 +90,10 @@ public abstract class BaseFragment extends Fragment {
         super.onSaveInstanceState(outState);
         if (mDialogRefence != null && mDialogRefence.get() != null) {
             outState.putSerializable(BUNDLE_ERROR_KEY, mErrorBundle);
+        }
+
+        if (getPresenter() != null) {
+            getPresenter().onSaveInstanceState(outState);
         }
     }
 

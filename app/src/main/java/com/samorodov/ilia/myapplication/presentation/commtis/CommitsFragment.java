@@ -74,20 +74,6 @@ public class CommitsFragment extends BaseFragment implements CommitsView {
         mCommitsPresenter.onCreate(this);
     }
 
-    @Nullable
-    @Override
-    public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View view = super.onCreateView(inflater, container, savedInstanceState);
-        mCommitsPresenter.onCreateView(savedInstanceState);
-        return view;
-    }
-
-    @Override
-    public void onSaveInstanceState(Bundle outState) {
-        super.onSaveInstanceState(outState);
-        mCommitsPresenter.onSaveInstanceState(outState);
-    }
-
     @Override
     public void showError(ErrorBundle e) {
         super.showError(e);

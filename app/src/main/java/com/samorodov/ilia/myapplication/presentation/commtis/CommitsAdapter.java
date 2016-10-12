@@ -9,7 +9,7 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import com.samorodov.ilia.myapplication.R;
-import com.samorodov.ilia.myapplication.model.Commit;
+import com.samorodov.ilia.myapplication.model.vo.Commit;
 
 import java.util.List;
 

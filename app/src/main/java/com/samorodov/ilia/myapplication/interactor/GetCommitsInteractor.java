@@ -1,9 +1,9 @@
 package com.samorodov.ilia.myapplication.interactor;
 
 import com.samorodov.ilia.myapplication.injection.dependencies.SchedulersModule;
-import com.samorodov.ilia.myapplication.model.Repository;
+import com.samorodov.ilia.myapplication.model.vo.Repo;
 import com.samorodov.ilia.myapplication.repository.commits.CommitsDataRepository;
-import com.samorodov.ilia.myapplication.model.Commit;
+import com.samorodov.ilia.myapplication.model.vo.Commit;
 
 
 import java.util.List;
@@ -13,9 +13,8 @@ import javax.inject.Named;
 
 import rx.Observable;
 import rx.Scheduler;
-import rx.functions.Func1;
 
-public class GetCommitsInteractor extends BaseInteractor<Repository,List<Commit>> {
+public class GetCommitsInteractor extends BaseInteractor<Repo,List<Commit>> {
 
     CommitsDataRepository repository;
 
@@ -35,7 +34,7 @@ public class GetCommitsInteractor extends BaseInteractor<Repository,List<Commit>
 
 
     @Override
-    protected Observable<List<Commit>> buildUseCaseObservable(Repository repo) {
+    protected Observable<List<Commit>> buildUseCaseObservable(Repo repo) {
         return repository.getCommits(repo.getAuthor(),repo.getRepo())
                 .subscribeOn(job)
                 .observeOn(ui)

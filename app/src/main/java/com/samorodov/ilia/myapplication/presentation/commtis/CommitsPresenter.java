@@ -6,7 +6,7 @@ import android.os.Bundle;
 import com.samorodov.ilia.myapplication.exception.ErrorBundleFactory;
 import com.samorodov.ilia.myapplication.interactor.GetCommitsInteractor;
 import com.samorodov.ilia.myapplication.interactor.SubscriberAdapter;
-import com.samorodov.ilia.myapplication.model.Commit;
+import com.samorodov.ilia.myapplication.model.vo.Commit;
 import com.samorodov.ilia.myapplication.presentation.base.BasePresenter;
 
 import java.util.ArrayList;

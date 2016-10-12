@@ -1,8 +1,8 @@
 package com.samorodov.ilia.myapplication.presentation.starting;
 
-import com.samorodov.ilia.myapplication.model.Repository;
+import com.samorodov.ilia.myapplication.model.vo.Repo;
 
 public interface StartingView {
 
-    void startCommitsFragment(Repository repo);
+    void startCommitsFragment(Repo repo);
 }

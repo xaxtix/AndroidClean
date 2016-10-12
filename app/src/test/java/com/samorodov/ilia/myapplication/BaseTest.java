@@ -2,6 +2,7 @@ package com.samorodov.ilia.myapplication;
 
 import com.samorodov.ilia.myapplication.Application;
 import com.samorodov.ilia.myapplication.injection.component.AppComponent;
+import com.samorodov.ilia.myapplication.injections.component.DaggerTestComponent;
 import com.samorodov.ilia.myapplication.injections.component.TestComponent;
 
 import org.junit.Before;
@@ -20,7 +21,8 @@ public class BaseTest {
     public TestComponent injector;
     @Before
     public void setUp() throws Exception {
-        injector = (TestComponent) Application.getInjector();
+        injector = DaggerTestComponent.builder()
+                .build();
     }
 
 }

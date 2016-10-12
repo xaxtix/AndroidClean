@@ -1,8 +1,7 @@
-package com.samorodov.ilia.myapplication.injections.dependencies;
+package com.samorodov.ilia.myapplication.injections.mock;
 
-import com.samorodov.ilia.myapplication.model.Commit;
+import com.samorodov.ilia.myapplication.model.vo.Commit;
 import com.samorodov.ilia.myapplication.repository.commits.CommitsDataRepository;
-import com.samorodov.ilia.myapplication.repository.commits.CommitsRepository;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -12,20 +11,15 @@ import javax.inject.Singleton;
 import dagger.Module;
 import dagger.Provides;
 import rx.Observable;
-import rx.Subscriber;
 
+import static com.samorodov.ilia.myapplication.injections.mock.Constants.*;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.when;
 
 @Module
-public class CommitsRepositoryTestModule {
+public class MockCommitsRepositoryModule {
 
-    public final static String OWNER = "OWNER";
 
-    public final static String REPO_TRUE = "kek";
-    public final static String REPO_FAIL = "lol";
-
-    public final static String TEST_EXCEPTION = "test exception";
 
     @Provides
     @Singleton

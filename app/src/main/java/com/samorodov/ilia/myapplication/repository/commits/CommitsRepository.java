@@ -1,6 +1,6 @@
 package com.samorodov.ilia.myapplication.repository.commits;
 
-import com.samorodov.ilia.myapplication.model.Commit;
+import com.samorodov.ilia.myapplication.model.vo.Commit;
 
 import java.util.List;
 

@@ -1,8 +1,8 @@
 package com.samorodov.ilia.myapplication.presentation.commtis;
 
 import com.samorodov.ilia.myapplication.exception.ErrorBundle;
-import com.samorodov.ilia.myapplication.model.Commit;
-import com.samorodov.ilia.myapplication.model.Repository;
+import com.samorodov.ilia.myapplication.model.vo.Commit;
+import com.samorodov.ilia.myapplication.model.vo.Repo;
 
 import java.util.List;
 
@@ -14,5 +14,5 @@ public interface CommitsView {
 
     void setCommits(List<Commit> commits);
 
-    Repository getRepoVO();
+    Repo getRepoVO();
 }

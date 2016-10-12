@@ -1,4 +1,4 @@
-package com.samorodov.ilia.myapplication.model;
+package com.samorodov.ilia.myapplication.model.vo;
 
 import java.io.Serializable;
 

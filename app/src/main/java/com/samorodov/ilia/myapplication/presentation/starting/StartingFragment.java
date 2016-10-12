@@ -7,10 +7,9 @@ import android.view.View;
 import android.view.inputmethod.EditorInfo;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.TextView;
 
 import com.samorodov.ilia.myapplication.R;
-import com.samorodov.ilia.myapplication.model.Repository;
+import com.samorodov.ilia.myapplication.model.vo.Repo;
 import com.samorodov.ilia.myapplication.presentation.base.BaseFragment;
 import com.samorodov.ilia.myapplication.presentation.base.BasePresenter;
 
@@ -78,7 +77,7 @@ public class StartingFragment extends BaseFragment implements StartingView{
     }
 
     @Override
-    public void startCommitsFragment(Repository repo) {
+    public void startCommitsFragment(Repo repo) {
         getActivityCallback().startCommitsFragment(repo);
     }
 }

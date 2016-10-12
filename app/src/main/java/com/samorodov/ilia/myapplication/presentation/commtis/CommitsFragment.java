@@ -9,8 +9,8 @@ import android.widget.ProgressBar;
 
 import com.samorodov.ilia.myapplication.R;
 import com.samorodov.ilia.myapplication.exception.ErrorBundle;
-import com.samorodov.ilia.myapplication.model.Commit;
-import com.samorodov.ilia.myapplication.model.Repository;
+import com.samorodov.ilia.myapplication.model.vo.Commit;
+import com.samorodov.ilia.myapplication.model.vo.Repo;
 import com.samorodov.ilia.myapplication.presentation.base.BaseFragment;
 import com.samorodov.ilia.myapplication.presentation.base.BasePresenter;
 
@@ -33,7 +33,7 @@ public class CommitsFragment extends BaseFragment implements CommitsView {
     @BindView(R.id.progressBar)
     ProgressBar mProgressBar;
 
-    public static CommitsFragment newInstance(Repository repo) {
+    public static CommitsFragment newInstance(Repo repo) {
         CommitsFragment fragment = new CommitsFragment();
 
         Bundle bundle = new Bundle();
@@ -43,8 +43,8 @@ public class CommitsFragment extends BaseFragment implements CommitsView {
     }
 
     @Override
-    public Repository getRepoVO() {
-        return (Repository) getArguments().getSerializable(BUNDLE_REPO_KEY);
+    public Repo getRepoVO() {
+        return (Repo) getArguments().getSerializable(BUNDLE_REPO_KEY);
     }
 
     @Override

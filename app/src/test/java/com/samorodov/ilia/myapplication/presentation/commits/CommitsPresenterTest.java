@@ -1,4 +1,4 @@
-package com.samorodov.ilia.myapplication.presentation;
+package com.samorodov.ilia.myapplication.presentation.commits;
 
 import com.samorodov.ilia.myapplication.BaseTest;
 import com.samorodov.ilia.myapplication.interactor.GetCommitsInteractor;

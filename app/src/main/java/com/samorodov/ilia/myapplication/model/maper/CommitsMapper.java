@@ -1,6 +1,6 @@
 package com.samorodov.ilia.myapplication.model.maper;
 
-import com.samorodov.ilia.myapplication.model.Commit;
+import com.samorodov.ilia.myapplication.model.vo.Commit;
 import com.samorodov.ilia.myapplication.model.dto.CommitDTO;
 
 import java.util.ArrayList;

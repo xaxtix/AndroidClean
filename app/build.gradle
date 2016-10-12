@@ -96,11 +96,11 @@ task jacocoTestReport(type: JacocoReport, dependsOn: "testDebugUnitTest") {
                        '**/R$*.class',
                        '**/*$ViewInjector*.*',
                        '**/*$ViewBinder*.*',   //DI
-                       '**/*_MembersInjector*.*',  //DI
-                       '**/*_Factory*.*',  //DI
-                       '**/stepbystep/model/dto/*.*', //dto model
-                       '**/stepbystep/presenter/vo/*.*', //vo model
-                       '**/stepbystep/other/**',
+                       '**/*_MembersInjector*.*',
+                       '**/*_Factory*.*',
+                       '**/myapplication/model/dto/*.*', //dto model
+                       '**/myapplication/model/vo/*.*', //vo model
+                       '**/myapplication/injection/**',
                        '**/BuildConfig.*',
                        '**/Manifest*.*',
                        '**/Lambda$*.class',

@@ -1,7 +1,7 @@
 package com.samorodov.ilia.myapplication.model.mapper;
 
 import com.samorodov.ilia.myapplication.model.BaseModelTest;
-import com.samorodov.ilia.myapplication.model.Commit;
+import com.samorodov.ilia.myapplication.model.vo.Commit;
 import com.samorodov.ilia.myapplication.model.dto.CommitDTO;
 import com.samorodov.ilia.myapplication.model.maper.CommitsMapper;
 

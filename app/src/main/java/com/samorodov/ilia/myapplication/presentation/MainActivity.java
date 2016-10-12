@@ -6,7 +6,7 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 
 import com.samorodov.ilia.myapplication.R;
-import com.samorodov.ilia.myapplication.model.Repository;
+import com.samorodov.ilia.myapplication.model.vo.Repo;
 import com.samorodov.ilia.myapplication.presentation.commtis.CommitsFragment;
 import com.samorodov.ilia.myapplication.presentation.starting.StartingFragment;
 
@@ -27,8 +27,8 @@ public class MainActivity extends AppCompatActivity implements ActivityCallback 
     }
 
     @Override
-    public void startCommitsFragment(Repository repository) {
-        addNewFragment(CommitsFragment.newInstance(repository));
+    public void startCommitsFragment(Repo repo) {
+        addNewFragment(CommitsFragment.newInstance(repo));
     }
 
     @Override
